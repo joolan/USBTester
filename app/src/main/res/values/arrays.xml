@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="hex_presets">
+        <item>AA 04 01 55</item><!-- 检测状态-->
+        <item>AA 04 02 55</item><!-- 读版本号-->
+        <item>1B 4A 64</item><!-- 打印并走纸 64*16进制*0.125毫米-->
+    </string-array>
+</resources>

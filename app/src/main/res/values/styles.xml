@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<style name="LogTextView">
+    <item name="android:textColor">#333333</item>
+    <item name="android:lineSpacingExtra">4dp</item>
+    <item name="android:padding">8dp</item>
+    <item name="android:textIsSelectable">true</item>
+    <item name="android:scrollbarStyle">outsideInset</item>
+    <item name="android:scrollbarThumbVertical">@drawable/custom_scroll_thumb</item>
+</style>
+    <style name="HexInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/input_box_stroke</item>
+        <item name="hintTextColor">@color/input_hint</item>
+    </style>
+
+    <color name="input_box_stroke">#2196F3</color>
+    <color name="input_hint">#757575</color>
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="hintTextColor">@color/input_hint</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <color name="input_stroke">#2196F3</color>
+
+</resources>

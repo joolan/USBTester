@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".USBActivity">
+
+    <!-- 设备操作行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="选择设备"
+            android:onClick="onSelectClick"/>
+
+        <Button
+            android:id="@+id/btn_connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="连接设备"
+            android:onClick="onConnectClick"/>
+
+    </LinearLayout>
+
+    <!-- 数据输入区域 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hex_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="输入Hex数据"
+        style="@style/TextInputLayoutStyle">
+
+        <AutoCompleteTextView
+            android:id="@+id/hex_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:imeOptions="actionDone"
+            android:dropDownWidth="match_parent"
+            android:dropDownHeight="wrap_content"
+            android:dropDownVerticalOffset="4dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 数据操作行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发送数据"
+            android:onClick="sendData"/>
+
+        <Button
+            android:id="@+id/btn_receive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="接收数据"
+            android:onClick="receiveData"/>
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="清除日志"/>
+
+    </LinearLayout>
+
+    <!-- 日志显示区域 -->
+    <ScrollView
+        android:id="@+id/scroll_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/log_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:scrollbars="vertical"
+            android:background="#EEE"
+            android:text="日志输出：\n"/>
+
+    </ScrollView>
+
+</LinearLayout>

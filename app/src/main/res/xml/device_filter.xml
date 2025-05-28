@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 替换为你的设备 VID/PID -->
+    <usb-device  vendor-id="0x5A5A" product-id="0x8009" />
+
+    <!-- 多个usb设备可以继续添加 -->
+    <usb-device vendor-id="0xABCD" product-id="0xEF01" />
+
+    <!-- 通配符，不过滤usb
+    <usb-device
+     vendor-id="*"
+     product-id="*" />
+     -->
+</resources>
